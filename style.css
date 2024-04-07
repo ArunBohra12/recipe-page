@@ -1,0 +1,190 @@
+:root {
+  --white: #fff;
+  --wenge-brown: #5f564d;
+  --brandy-red: #854632;
+  --white-coffee: #e3ddd7;
+  --dark-raspberry: #7a284e;
+  --dark-charcoal: #312e2c;
+  --eggshell: #f3e5d7;
+  --snow: #fff7fb;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  box-sizing: border-box;
+  line-height: 1.5;
+  background: var(--eggshell);
+  color: var(--wenge-brown);
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+
+/* Utility classes */
+.brown-heading {
+  color: var(--brandy-red);
+  margin-bottom: 2.4rem;
+  font-size: 2.8rem;
+}
+
+.list {
+  display: grid;
+  gap: 0.8rem;
+  list-style-type: none;
+}
+
+.list-disc {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  margin-right: 2.8rem;
+  margin-left: 0.8rem;
+}
+
+.list-number {
+  color: var(--brandy-red);
+  margin-right: 1.6rem;
+  margin-left: 0.8rem;
+  font-weight: 700;
+}
+
+/* Page CSS starts */
+.main {
+  background: var(--white);
+}
+
+.header-img {
+  width: 100%;
+  height: 17.1rem;
+  object-fit: cover;
+}
+
+.main-section {
+  padding: 4rem 3.2rem;
+  display: grid;
+  gap: 3.2rem;
+}
+
+.description__heading {
+  font-size: 3.6rem;
+  margin-bottom: 2.4rem;
+  color: var(--dark-charcoal);
+}
+
+.timing {
+  background: var(--snow);
+  padding: 2.4rem;
+  border-radius: 12px;
+}
+
+.timing__heading {
+  color: var(--dark-raspberry);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+
+.timing__list-item,
+.ingredients__list-item {
+  display: grid;
+  grid-template-columns: 4.4rem 1fr;
+  align-items: center;
+}
+
+.timing__list-item .list-disc {
+  background: var(--dark-raspberry);
+}
+
+.ingredients__list-item .list-disc {
+  background: var(--brandy-red);
+}
+
+.section-separator {
+  width: 100%;
+  height: 1px;
+  background: var(--white-coffee);
+}
+
+.instructions__list {
+  list-style-type: none;
+}
+
+.instructions__list-item {
+  display: flex;
+}
+
+.nutrition-table {
+  margin-top: 2.4rem;
+}
+
+.nutrition-table__row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--white-coffee);
+  gap: 1.6rem;
+}
+
+.nutrition-table__row:last-child {
+  border-bottom: none;
+}
+
+.nutrition-table__row:not(:first-child) {
+  margin-top: 1.2rem;
+}
+
+.nutrition-table__row .key {
+  text-align: center;
+}
+
+.nutrition-table__row .value {
+  font-weight: 700;
+  color: var(--brandy-red);
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+  .main {
+    width: 73.6rem;
+    padding: 4rem;
+    padding-bottom: 0;
+    border-radius: 2.4rem;
+    margin: 12.3rem auto;
+  }
+
+  .header-img {
+    height: 30rem;
+    border-radius: 1.2rem;
+  }
+
+  .description__heading {
+    font-size: 4rem;
+  }
+
+  .nutrition-table__row .key {
+    padding-left: 3.2rem;
+    text-align: left;
+  }
+}
